@@ -1,0 +1,19 @@
+.favorite {
+  padding: 32px 0 60px;
+  text-align: center;
+
+  @include breakpoint($tablet) {
+    padding: 60px 0;
+  }
+
+  h1 {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .empty--list {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
