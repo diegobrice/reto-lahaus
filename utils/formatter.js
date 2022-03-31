@@ -1,3 +1,7 @@
+export const getFavoriteListContent = (number) => {
+  return number === 1 ? '1 propiedad guardada' : `${number} propiedades guardadas`;
+};
+
 export const getFormattedFavorites = (data) => {
   const favorites = data.data;
   const list = data.included;

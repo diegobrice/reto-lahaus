@@ -1,0 +1,28 @@
+.favorites {
+  padding: 32px 0 60px;
+
+  @include breakpoint($tablet) {
+    padding: 60px 0;
+  }
+
+  h1 {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .grid {
+    max-width: 970px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px 30px;
+
+    @include breakpoint($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($desktop-sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

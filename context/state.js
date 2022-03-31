@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useContext, createContext } from 'react';
 import { useFetch } from '../hooks/useFetch';
-// import { emptyFavoriteList } from '../MockData';
+import { emptyFavoriteList } from '../MockData';
 import { getFormattedFavorites } from '../utils/formatter';
 
 export const AppContext = createContext(null);
@@ -17,7 +17,7 @@ export const AppContextProvider = ({ children }) => {
       const state = {
         user: {},
         list,
-        favorites: [ ...formattedFavorites],
+        favorites: [emptyFavoriteList, ...formattedFavorites],
       };
       setAppState(state);
     }
