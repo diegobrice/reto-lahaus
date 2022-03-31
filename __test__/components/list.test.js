@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import List from '../../components/List';
 import '@testing-library/jest-dom';
-import { mockData } from '../../MockData';
+import { mockData } from '../../mockData';
 import { getFavoriteListContent } from '../../utils/formatter';
 
 describe('List component', () => {
