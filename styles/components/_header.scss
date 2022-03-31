@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60px;
+  border-bottom: 1px solid $light-gray;
+
+  @include breakpoint($desktop-sm) {
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: none;
+    @include breakpoint($tablet) {
+      display: block;
+    }
+    &--mobile {
+      @include breakpoint($tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    animation: none;
+  }
+}

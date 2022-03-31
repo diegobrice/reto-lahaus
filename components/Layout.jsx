@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from './Header';
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         />
         <link rel="preload" href="fonts/silka-regular-webfont.ttf" as="font" crossOrigin="" />
       </Head>
+      <Header />
       <main>{children}</main>
     </>
   );

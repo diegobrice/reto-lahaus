@@ -1,0 +1,62 @@
+nav {
+  order: -1;
+
+  .active {
+    color: $gray;
+  }
+
+  .bar {
+    margin-right: 1rem;
+    @include breakpoint($desktop-sm) {
+      display: none;
+    }
+  }
+  @include breakpoint($desktop-sm) {
+    order: initial;
+  }
+
+  ul {
+    background-color: rgba($color: $light-gray, $alpha: 0.9);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 2.4rem;
+    z-index: 100;
+
+    a {
+      font-size: 2.4rem;
+    }
+
+    li {
+      margin: 30px;
+    }
+
+    li:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    @include breakpoint($desktop-sm) {
+      background-color: transparent;
+      width: auto;
+      height: auto;
+      flex-direction: row;
+      font-size: initial;
+      position: initial;
+      padding: 0;
+
+      a {
+        font-size: initial;
+      }
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+}

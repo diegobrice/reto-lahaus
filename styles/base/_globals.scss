@@ -13,6 +13,81 @@ body {
   color: $primary-color;
 }
 
-h1{
-  font-size: 30px;
+h1,
+h2,
+h3 {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+
+  @include breakpoint($tablet) {
+    font-size: 3rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+ul,
+ol {
+  list-style: none;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  flex-direction: inherit;
+  flex-wrap: inherit;
+  animation: fadeIn linear 0.3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.grid {
+  max-width: 970px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+
+  @include breakpoint($tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint($desktop-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.button {
+  background-color: $blue;
+  border-radius: 10px;
+  color: white;
+  padding: 18px 24px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: inline-block;
+  margin: 60px auto;
 }
